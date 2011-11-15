@@ -1,0 +1,5 @@
+/target/
+/project/boot/
+target
+/lib_managed/
+/*.db
