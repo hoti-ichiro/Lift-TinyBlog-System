@@ -1,6 +1,6 @@
 import sbt._
 
-class LiftProject(info: ProjectInfo) extends DefaultWebProject(info) {
+class LiftProject(info: ProjectInfo) extends DefaultWebProject(info) with IdeaProject {
   val liftVersion = property[Version]
 
   // uncomment the following if you want to use the snapshot repo
@@ -19,6 +19,8 @@ class LiftProject(info: ProjectInfo) extends DefaultWebProject(info) {
     "junit" % "junit" % "4.7" % "test",
     "ch.qos.logback" % "logback-classic" % "0.9.26",
     "org.scala-tools.testing" %% "specs" % "1.6.8" % "test",
+    // "org.specs2" %% "specs2" % "1.6.1",
+    // "org.specs2" %% "specs2-scalaz-core" % "6.0.RC2" % "test", 
     "com.h2database" % "h2" % "1.2.147"
   ) ++ super.libraryDependencies
 }

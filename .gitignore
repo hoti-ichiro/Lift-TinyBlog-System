@@ -1,5 +1,9 @@
 /target/
-/project/boot/
 target
+/project/boot/
 /lib_managed/
+lib_managed
+src_managed
 /*.db
+*.iml
+/.idea/
